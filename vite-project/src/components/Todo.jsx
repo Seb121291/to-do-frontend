@@ -1,8 +1,13 @@
 import React from 'react'
-export default function Todo() {
+export default function Todo({ taskData }) {
   return (
     <div>
-      <p>Aufgabe 1</p>
+      <p>
+        <input type="checkbox" value={taskData.completed} />
+        {taskData.title}
+        <button>ändern</button>
+        <button>löschen</button>
+      </p>
     </div>
   )
 }
